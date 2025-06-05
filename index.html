@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menopause Medications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffe9e5;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; /* Allows stacking of .med-table elements */
+      align-items: center;
+    }
+    .med-table {
+      width: 90%; /* Increased width for better mobile use */
+      max-width: 600px; /* Max width for larger screens */
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 30px; /* Space between medication categories */
+    }
+    .category-header {
+      background-color: #ffa798;
+      color: #4a2d2d;
+      padding: 10px 10px;
+      font-size: 1.5em;
+      font-weight: 500;
+      text-align: left;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed; /* Ensures equal spacing for columns */
+    }
+    th {
+      background-color: #ffa798;
+      color: #000;
+      padding: 12px;
+      font-weight: 600;
+    }
+    th:first-child { /* Medication (Generic/Brand) */
+      text-align: left;
+      width: 65%; /* Allocate more width for medication name */
+    }
+    th:last-child { /* Combined GoodRx / Hippo */
+      text-align: center;
+      width: 35%; /* Allocate remaining width for the pills */
+    }
+    td {
+      padding: 14px;
+      text-align: center;
+      border-top: 1px solid #f0cfc9;
+      vertical-align: middle;
+    }
+    td:first-child { /* Medication (Generic/Brand) data cells */
+      text-align: left;
+      font-weight: 500;
+      color: #333;
+    }
+    td:last-child { /* Combined GoodRx / Hippo data cells */
+      text-align: center;
+    }
+    tr:hover {
+      background-color: #ffe0e0;
+    }
+    .pill-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers the pills vertically */
+      gap: 10px; /* Space between the pills */
+    }
+    .pill {
+      width: 50px;
+      height: 24px;
+      border-radius: 50px;
+      overflow: hidden;
+      display: flex;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease;
+      /* margin: 0 auto; - Removed as parent flexbox handles centering */
+    }
+    .pill:hover {
+      transform: scale(1.07);
+    }
+    .half {
+      width: 50%;
+      height: 100%;
+    }
+    /* Color classes for the pill halves */
+    .goodrx-left { background-color: #fdf589; }
+    .goodrx-right { background-color: #a4c2f4; }
+    .hippo-left { background-color: #48a868; }
+    .hippo-right { background-color: #d5f4ff; }
+  </style>
+</head>
+<body>
+
+  <div class="med-table">
+    <div class="category-header">Estrogen patches</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Medication (Generic/Brand)</th>
+          <th>GoodRx / Hippo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estradiol patch once-weekly (Climara)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/climara" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/climara" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol patch twice-weekly (Dotti, Vivelle-Dot)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/estradiol?ppid=3&form=carton&dosage=8-twice-weekly-patches-of-0.075mg-day&quantity=1&label_override=estradiol" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/dotti" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="med-table">
+    <div class="category-header">Combination estrogen / progestogen patches</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Medication (Generic/Brand)</th>
+          <th>GoodRx / Hippo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estradiol / levonorgestrel (Climara Pro)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/climara-pro" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/climara-pro" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol / norethindrone (Combipatch)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/combipatch" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Combipatch" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="med-table">
+    <div class="category-header">Vaginal estrogen</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Medication (Generic/Brand)</th>
+          <th>GoodRx / Hippo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estradiol vaginal cream (Estrace)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/estrace" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Estrace" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Conjugated estrogens vaginal cream (Premarin cream)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/premarin-vaginal-cream" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Premarin" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol vaginal tablets (Yuvafem, Vagifem)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/yuvafem" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/vagifem" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol vaginal ring (Estring)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/estring" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/estradiol" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol vaginal ring (Femring)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/femring" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Femring" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="med-table">
+    <div class="category-header">Oral combination pills</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Medication (Generic/Brand)</th>
+          <th>GoodRx / Hippo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estradiol / norethindrone (Mimvey, Loprezza, Activella)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/mimvey" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Mimvey" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol / norethindrone-eth (Fyavolv, Jinteli, Femhrt, Jevantique)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/jevantique" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Fyavolv" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol / progesterone (Bijuva)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/bijuva" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Bijuva" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Conjugated estrogens / medroxyprogesterone (Prempro, Premphase)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/prempro" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Prempro" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Conjugated estrogens / bazedoxifene (Duavee)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/duavee" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Duavee" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="med-table">
+    <div class="category-header">Topical estrogen or testosterone gel or spray</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Medication (Generic/Brand)</th>
+          <th>GoodRx / Hippo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Estradiol gel single-use packets (Divigel)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/divigel" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Divigel" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol spray (Evamist)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/evamist" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/estradiol" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Estradiol gel metered-dose pump (Estrogel)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/estrogel" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Estrogel" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Testosterone gel metered-dose pump (Androgel, Axiron, Fortesta, Testim, Vogelxo)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/testosterone" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Androgel" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="med-table">
+    <div class="category-header">Oral progestogens</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Medication (Generic/Brand)</th>
+          <th>GoodRx / Hippo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Micronized natural progesterone / Prometrium</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/progesterone?ppid=3&form=capsule&dosage=100mg&quantity=90&label_override=progesterone" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/progesterone" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Synthetic progestin / Medroxyprogesterone (Provera)</td>
+          <td>
+            <div class="pill-stack">
+              <a href="https://www.goodrx.com/provera" target="_blank" class="pill">
+                <span class="half goodrx-left"></span><span class="half goodrx-right"></span>
+              </a>
+              <a href="https://hellohippo.com/Provera" target="_blank" class="pill">
+                <span class="half hippo-left"></span><span class="half hippo-right"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
